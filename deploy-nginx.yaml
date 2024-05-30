@@ -1,14 +1,13 @@
-# version y tipo de archivo
+#Version y tipo de archivo
 apiVersion: apps/v1
 kind: Deployment
 
-# metadadata y etiquetas.
+#Metadatas y etiquetas
 metadata:
   name: ejm-deployment
   labels:
     app: app-ejemplo
 
-# especificaciones del deployment
 spec:
   selector:
     matchLabels:
@@ -20,8 +19,7 @@ spec:
       name: nginx
       labels:
         proyecto: app-nginx
-
-# contenedores.
+    
     spec:
       containers:
         - name: nginx
